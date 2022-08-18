@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Invencível</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Logo</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img
+        src="images/céu limpo noite.jpg"
+        id="stars"
+        alt="Céu Estrelado"
+        title="Céu Estrelado"
+      />
+      <img src="images/forest.png" id="forest" alt="Floresta" title="Arvores" />
+      <img
+        src="images/castle.png"
+        id="castle"
+        alt="Castelo Oriental"
+        title="Castelo"
+      />
+      <h2 id="text">Invencível</h2>
+      <a href="Explore/index.html" id="btn">Explore</a>
+    </section>
+    <div class="sec" id="sec">
+      <h2
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        data-aos-offset="220"
+      >
+        Nossa Existência deforma o universo. Isso, é responsabilidade.
+      </h2>
+      <br />
+      <br />
+      <p data-aos="fade-up" data-aos-duration="1500" data-aos-offset="280">
+        Travar no primeiro passo é comum, não é regra. Talvez por uma falha no
+        sentimento que nos permite compreender a totalidade de nosso mundo
+        interior ou pela falta de conduta que nos assegura do bem-estar, ou bom
+        funcionamento, do nosso sistema social/profissional. Imbatível ou um
+        grande entusiasta da
+        <span style="color: rgb(218, 233, 17)">positividade</span>, da leitura
+        correta do Karma que nos rodeia. Um cidadão que não corre do lado oposto
+        da via moral, ética e lenta. Um
+        <span style="color: rgb(218, 233, 17)">vencedor</span> que não esconde o
+        coração, não economiza linhas e nem referências. Aquele que nem sempre
+        prefere a vitória e honra a glória de chorar. Servir de acordo com os
+        nossos dons ou administrar obedecendo as injustas regras de um sistema
+        baseado em CEP? Responder tal pergunta nos posiciona como insubmissos,
+        incapazes de seguir adiante sem manifestar uma conduta indomável.
+        Surgir, como pessoa, talvez exija tal resposta; talvez. Romper a
+        barreira do medo que nos impede de surgir significa apanhar a caneta,
+        assumir o leme, resistir aos erros, saborear o amargo, plantar antes de
+        colher e então perceber que o doce ganhado não chega aos pés daquele que
+        foi conquistado. Integridade compõe a maior parte da invencibilidade e
+        ser invencível jamais será uma questão sobre vencer, ser inatingível ou
+        insuperável.
+      </p>
+    </div>
+    <script>
+      let stars = document.getElementById("stars");
+      let forest = document.getElementById("forest");
+      let castle = document.getElementById("castle");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        stars.style.left = `${value * 0.25}px`;
+        stars.style.top = `${value * 0.02}px`;
+        castle.style.right = `${value * 0.1}px`;
+        castle.style.top = `${value * 0.1}px`;
+        forest.style.top = `${value * 0.2}px`;
+        text.style.marginRight = `${value * 0.7}px`;
+        text.style.marginTop = `${value * 0.7}px`;
+        btn.style.marginTop = `${value * 0.8}px`;
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
