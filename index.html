@@ -71,14 +71,14 @@
       </p>
     </div>
     <script>
-      let stars = document.getElementById("stars");
-      let forest = document.getElementById("forest");
-      let castle = document.getElementById("castle");
-      let text = document.getElementById("text");
-      let btn = document.getElementById("btn");
+      const stars = document.getElementById("stars");
+      const forest = document.getElementById("forest");
+      const castle = document.getElementById("castle");
+      const text = document.getElementById("text");
+      const btn = document.getElementById("btn");
 
       window.addEventListener("scroll", function () {
-        let value = window.scrollY;
+        const value = window.scrollY;
         stars.style.left = `${value * 0.25}px`;
         stars.style.top = `${value * 0.02}px`;
         castle.style.right = `${value * 0.1}px`;
