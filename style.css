@@ -53,14 +53,14 @@ header ul li a {
   text-decoration: none;
   padding: 6px 15px;
   color: #fff;
+
   border-radius: 20px;
 }
 
 header ul li a:hover {
-  background-color: #fff;
   color: #11085f;
-  transition: all 0.3s ease-out;
-  letter-spacing: 2.1px;
+  transition: all 0.4s ease-out;
+  background-color: #fff;
 }
 
 section {

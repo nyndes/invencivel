@@ -38,9 +38,9 @@
         title="Castelo"
       />
       <h2 id="text">Invencível</h2>
-      <a href="Explore/index.html" id="btn">Explore</a>
+      <a href="Explore/index.html" class="i-btn">Explore</a>
     </section>
-    <div class="sec" id="sec">
+    <div class="sec">
       <h2
         data-aos="fade-down"
         data-aos-easing="linear"
@@ -80,7 +80,7 @@
       const forest = document.getElementById("forest");
       const castle = document.getElementById("castle");
       const text = document.getElementById("text");
-      const btn = document.getElementById("btn");
+      const btn = document.querySelector(".i-btn");
 
       window.addEventListener("scroll", function () {
         const value = window.scrollY;
