@@ -117,7 +117,7 @@ section img#castle {
   z-index: 9;
 }
 
-#btn {
+.i-btn {
   text-decoration: none;
   display: inline-block;
   padding: 8px 30px;
@@ -128,9 +128,10 @@ section img#castle {
   z-index: 9;
   transform: translateY(100px);
   transition: all 0.3s ease-out;
+  border: none;
 }
 
-#btn:hover {
+.i-btn:hover {
   font-size: 1.4em;
 }
 
