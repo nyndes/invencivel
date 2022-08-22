@@ -122,17 +122,18 @@ section img#castle {
   display: inline-block;
   padding: 8px 30px;
   border-radius: 40px;
-  background: #fff;
-  color: #0a0b5a;
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  color: #013469;
   font-size: 1.5em;
   z-index: 9;
   transform: translateY(100px);
-  transition: all 0.3s ease-out;
-  border: none;
+  border: solid #013469;
 }
 
 .i-btn:hover {
-  font-size: 1.4em;
+  color: #aed1f7;
+  border: solid #aed1f7;
+  transition: all 0.4s ease-out;
 }
 
 .sec {
