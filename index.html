@@ -14,6 +14,11 @@
     <title>Invencível</title>
   </head>
   <body>
+    <div class="i-loader">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <header>
       <a href="#" class="logo">Logo</a>
       <ul>
@@ -92,6 +97,15 @@
         text.style.marginRight = `${value * 0.7}px`;
         text.style.marginTop = `${value * 0.7}px`;
         btn.style.marginTop = `${value * 0.8}px`;
+      });
+
+      window.addEventListener("load", function () {
+        var pageloader = document.querySelector(".i-loader");
+        pageloader.classList.add("i-fade-out");
+
+        setTimeout(function () {
+          pageloader.style.display = "none";
+        }, 2000);
       });
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
