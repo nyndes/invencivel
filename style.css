@@ -6,6 +6,18 @@
   font-family: "Poppins", sans-serif;
 }
 
+@keyframes loader {
+  50% {
+    height: 45px;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0.2;
+  }
+}
+
 body {
   min-height: 100vh;
   background-image: linear-gradient(
@@ -30,7 +42,7 @@ header {
 }
 
 header .logo {
-  color: #fff;
+  color: #fefef2;
   font-weight: 700;
   text-decoration: none;
   font-size: 2em;
@@ -109,9 +121,48 @@ section img#castle {
   top: 0;
 }
 
+.i-loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  z-index: 11000;
+}
+
+.i-loader div {
+  background: #fefef2;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  animation: loader 1s infinite;
+}
+
+.i-loader div:nth-child(1) {
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  animation-delay: -0.6s;
+}
+
+.i-loader div:nth-child(2) {
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  animation-delay: -0.4s;
+}
+
+.i-loader div:nth-child(3) {
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  animation-delay: -0.2s;
+}
+
+.i-fade-out {
+  animation: fadeOut 3s forwards ease-out;
+}
+
 #text {
   position: absolute;
-  color: #fff;
+  color: #fefef2;
   white-space: nowrap;
   font-size: 7.5vw;
   z-index: 9;
@@ -123,17 +174,19 @@ section img#castle {
   padding: 8px 30px;
   border-radius: 40px;
   background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
-  color: #013469;
+  color: #fefef2;
   font-size: 1.5em;
   z-index: 9;
   transform: translateY(100px);
-  border: solid #013469;
+  transition: all 0.1s ease-in-out;
+  border: solid #013469 1px;
 }
 
 .i-btn:hover {
-  color: #aed1f7;
-  border: solid #aed1f7;
-  transition: all 0.4s ease-out;
+  letter-spacing: 1px;
+  border: solid #aed1f7 1px;
+  background-image: linear-gradient(to right, #5e93be 0%, #1b2c38 100%);
+  transition: all 0.1s ease-out;
 }
 
 .sec {
@@ -146,12 +199,12 @@ section img#castle {
 .sec h2 {
   font-size: 3.5em;
   margin-bottom: 10px;
-  color: #fff;
+  color: #fefef2;
 }
 
 .sec p {
   font-size: 1.2em;
-  color: #fff;
+  color: #fefef2;
   text-align: center;
 }
 
