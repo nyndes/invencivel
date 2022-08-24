@@ -75,7 +75,7 @@ header ul li a:hover {
   background-color: #fff;
 }
 
-section {
+.i-section {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -85,7 +85,7 @@ section {
   align-items: center;
 }
 
-section::before {
+.i-section::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -95,7 +95,7 @@ section::before {
   z-index: 1000;
 }
 
-section img {
+.i-section img {
   position: absolute;
   width: 100%;
   object-fit: cover;
@@ -105,17 +105,17 @@ section img {
   display: block;
 }
 
-section img#stars {
+.i-section img#stars {
   mix-blend-mode: screen;
   top: 0;
 }
 
-section img#forest {
+.i-section img#forest {
   z-index: 10;
   height: 100vh;
 }
 
-section img#castle {
+.i-section img#castle {
   z-index: 7;
   height: 125vh;
   top: 0;
