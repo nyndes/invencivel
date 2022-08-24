@@ -248,3 +248,39 @@ header ul li a:hover {
     #fff800 100%
   );
 }
+
+.e-image-gallery {
+  width: 100%;
+  position: relative;
+  top: -500px;
+  left: -25px;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: 350px;
+  grid-auto-flow: dense;
+  grid-gap: 25px;
+}
+
+.e-image-gallery .e-image-box {
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.e-image-gallery .e-image-box:nth-child(even) {
+  grid-row: span 2;
+}
+
+.e-image-gallery .e-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.e-image-gallery .e-image-box img:hover {
+  transform: scale(1.1);
+}
