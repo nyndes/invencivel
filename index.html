@@ -31,18 +31,23 @@
     <section class="i-section">
       <img
         src="images/céu limpo noite.jpg"
-        id="stars"
         alt="Céu Estrelado"
         title="Céu Estrelado"
+        class="i-stars"
       />
-      <img src="images/forest.png" id="forest" alt="Floresta" title="Arvores" />
+      <img
+        src="images/forest.png"
+        alt="Floresta"
+        title="Arvores"
+        class="i-forest"
+      />
       <img
         src="images/castle.png"
-        id="castle"
         alt="Castelo Oriental"
         title="Castelo"
+        class="i-castle"
       />
-      <h2 id="text">Invencível</h2>
+      <h2 class="i-text">Invencível</h2>
       <a href="Explore/index.html" class="i-btn">Explore</a>
     </section>
     <div class="sec">
@@ -81,10 +86,10 @@
       </p>
     </div>
     <script>
-      const stars = document.getElementById("stars");
-      const forest = document.getElementById("forest");
-      const castle = document.getElementById("castle");
-      const text = document.getElementById("text");
+      const stars = document.querySelector(".i-stars");
+      const forest = document.querySelector(".i-forest");
+      const castle = document.querySelector(".i-castle");
+      const text = document.querySelector(".i-text");
       const btn = document.querySelector(".i-btn");
 
       window.addEventListener("scroll", function () {
