@@ -101,7 +101,6 @@ header ul li a:hover {
   object-fit: cover;
   pointer-events: none;
   max-width: 100%;
-  height: auto;
   display: block;
 }
 
