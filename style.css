@@ -121,7 +121,10 @@ section img#castle {
   top: 0;
 }
 
-.i-loader {
+/*LOADER*/
+
+.i-loader,
+.e-loader {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -132,7 +135,8 @@ section img#castle {
   z-index: 11000;
 }
 
-.i-loader div {
+.i-loader div,
+.e-loader div {
   background: #fefef2;
   width: 10px;
   height: 10px;
@@ -153,6 +157,21 @@ section img#castle {
 
 .i-loader div:nth-child(3) {
   background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  animation-delay: -0.2s;
+}
+
+.e-loader div:nth-child(1) {
+  background-image: linear-gradient(to top, #ff1361 0%, #fff800 100%);
+  animation-delay: -0.6s;
+}
+
+.e-loader div:nth-child(2) {
+  background-image: linear-gradient(to top, #ff1361 0%, #fff800 100%);
+  animation-delay: -0.4s;
+}
+
+.e-loader div:nth-child(3) {
+  background-image: linear-gradient(to top, #ff1361 0%, #fff800 100%);
   animation-delay: -0.2s;
 }
 
@@ -183,7 +202,6 @@ section img#castle {
 }
 
 .i-btn:hover {
-  letter-spacing: 1px;
   border: solid #aed1f7 1px;
   background-image: linear-gradient(to right, #5e93be 0%, #1b2c38 100%);
   transition: all 0.1s ease-out;
