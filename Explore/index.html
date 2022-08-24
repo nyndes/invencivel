@@ -14,6 +14,11 @@
     <title>Explore</title>
   </head>
   <body class="pa-background">
+    <div class="e-loader">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <header>
       <a href="#" class="logo">Logo</a>
       <ul>
@@ -35,6 +40,15 @@
 
         topBarBk.style.backgroundPositionX = `${value * -8}px`;
         topBarBk.style.backgroundPositionY = `${value * -2}px`;
+      });
+
+      window.addEventListener("load", function () {
+        var pageloader = document.querySelector(".e-loader");
+        pageloader.classList.add("i-fade-out");
+
+        setTimeout(function () {
+          pageloader.style.display = "none";
+        }, 2000);
       });
     </script>
   </body>
