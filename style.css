@@ -41,15 +41,6 @@ header {
   z-index: 10000;
 }
 
-header .logo {
-  color: #fefef2;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
 header ul {
   display: flex;
   justify-content: center;
@@ -262,11 +253,11 @@ header ul li a:hover {
   grid-auto-rows: 350px;
   grid-auto-flow: dense;
   grid-gap: 25px;
+  filter: drop-shadow(5px 10px 0.75rem black);
 }
 
 .e-image-gallery .e-image-box {
   position: relative;
-  background-color: transparent;
   overflow: hidden;
 }
 
@@ -379,4 +370,16 @@ ion-icon:hover {
   color: #ecff3c;
   filter: drop-shadow(0 0 0.9rem black);
   transition: all 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .e-image-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: 350px;
+    left: 8px;
+  }
+
+  .e-image-gallery .e-image-box:nth-child(even) {
+    grid-row: unset;
+  }
 }
