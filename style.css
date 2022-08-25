@@ -281,6 +281,102 @@ header ul li a:hover {
   transition: all 0.5s ease;
 }
 
-.e-image-gallery .e-image-box img:hover {
+.e-image-gallery .e-image-box:hover img {
   transform: scale(1.1);
+}
+
+.e-image-gallery .e-image-box .e-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    210deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.e-image-gallery .e-image-box:hover .e-overlay {
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0.9;
+}
+
+.e-image-gallery .e-image-box .e-details {
+  text-align: center;
+}
+
+.e-image-gallery .e-image-box .e-details .e-title {
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  position: relative;
+  top: -5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.e-image-gallery .e-image-box .e-details .e-category {
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+  bottom: -5px;
+  top: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.e-image-gallery .e-image-box:hover .e-details .e-title {
+  top: 0px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s 0.2s ease;
+}
+
+.e-image-gallery .e-image-box:hover .e-details .e-category {
+  bottom: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s 0.2s ease;
+}
+
+.e-image-gallery .e-image-box .e-details .e-title a,
+.e-image-gallery .e-image-box .e-details .e-category a {
+  color: #fefef2;
+  text-decoration: none;
+}
+
+.e-image-gallery .e-image-box:nth-child(5) .e-details .e-title a:hover {
+  color: #ff6f9f;
+  transition: all 1s ease;
+}
+
+.e-image-gallery .e-image-box:nth-child(4) .e-details .e-title a:hover {
+  color: #ffd900;
+  transition: all 3s ease;
+}
+
+ion-icon {
+  font-size: 34px;
+  transition: all 0.2s ease;
+}
+
+ion-icon:hover {
+  color: #ecff3c;
+  filter: drop-shadow(0 0 0.9rem black);
+  transition: all 0.2s ease;
 }
