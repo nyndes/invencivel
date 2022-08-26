@@ -25,14 +25,29 @@
           src="../images/information-small-letter-i-symbol-svgrepo-com.svg"
           alt="Logo"
       /></a>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
     </header>
-
+    <div class="i-navigation">
+      <div class="i-userBox">
+        <div class="i-imgBox">
+          <img src="../images/look.jpg" alt="Perfil img" />
+        </div>
+        <p class="i-username">Nyndes</p>
+      </div>
+      <div class="i-menu-toggle"></div>
+      <ul class="menu">
+        <li>
+          <a href="../index.html"
+            ><ion-icon name="home-sharp"></ion-icon>Home</a
+          >
+        </li>
+        <li>
+          <a href="#"><ion-icon name="person-sharp"></ion-icon>My Profile</a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="call-sharp"></ion-icon>Contact</a>
+        </li>
+      </ul>
+    </div>
     <div class="pa-topbar-background"></div>
 
     <section style="height: 700px"></section>
@@ -205,12 +220,18 @@
 
     <script>
       let topBarBk = document.querySelector(".pa-topbar-background");
+      const menuToggle = document.querySelector(".i-menu-toggle");
+      const navigation = document.querySelector(".i-navigation");
+
+      menuToggle.onclick = function () {
+        navigation.classList.toggle("active");
+      };
 
       window.addEventListener("scroll", function () {
         const value = window.scrollY;
 
-        topBarBk.style.backgroundPositionX = `${value * -8}px`;
-        topBarBk.style.backgroundPositionY = `${value * -2}px`;
+        topBarBk.style.backgroundPositionX = `${value * -0.7}px`;
+        topBarBk.style.backgroundPositionY = `${value * -0.8}px`;
       });
 
       window.addEventListener("load", function () {
