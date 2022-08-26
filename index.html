@@ -25,13 +25,24 @@
           src="images/information-small-letter-i-symbol-svgrepo-com.svg"
           alt="Logo"
       /></a>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
     </header>
+    <div class="i-navigation">
+      <div class="i-userBox">
+        <div class="i-imgBox">
+          <img src="images/look.jpg" alt="Perfil img" />
+        </div>
+        <p class="i-username">Nyndes</p>
+      </div>
+      <div class="i-menu-toggle"></div>
+      <ul class="menu">
+        <li>
+          <a href="#"><ion-icon name="person-sharp"></ion-icon>My Profile</a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="call-sharp"></ion-icon>Contact</a>
+        </li>
+      </ul>
+    </div>
     <section class="i-section">
       <img
         src="images/céu limpo noite.jpg"
@@ -52,7 +63,7 @@
         class="i-castle"
       />
       <h2 class="i-text">Invencível</h2>
-      <a href="Explore/index.html" class="i-btn">Explore</a>
+      <a href="Explore/index.html"> <button class="i-btn">Explore</button></a>
     </section>
     <div class="sec">
       <h2
@@ -95,6 +106,12 @@
       const castle = document.querySelector(".i-castle");
       const text = document.querySelector(".i-text");
       const btn = document.querySelector(".i-btn");
+      const menuToggle = document.querySelector(".i-menu-toggle");
+      const navigation = document.querySelector(".i-navigation");
+
+      menuToggle.onclick = function () {
+        navigation.classList.toggle("active");
+      };
 
       window.addEventListener("scroll", function () {
         const value = window.scrollY;
@@ -117,6 +134,14 @@
         }, 2000);
       });
     </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
