@@ -33,37 +33,153 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 30px 100px;
+  padding: 20px 70px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   z-index: 10000;
 }
 
-header ul {
+.i-navigation {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 120px;
+  height: 60px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10000;
+  transition: height 0.5s, width 0.5s;
+  transition-delay: 0s, 0.45s;
+}
+
+.i-navigation.active {
+  width: 200px;
+  height: 300px;
+  transition: width 0.5s, height 0.5s;
+  transition-delay: 0s, 0.45s;
+}
+
+.i-navigation .i-userBox {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: transparent;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.i-navigation.active .i-userBox {
+  width: calc(100% - 60px);
+}
+
+.i-navigation .i-userBox .i-username {
+  white-space: nowrap;
+  color: #fefef2;
+  font-size: 1.1em;
+}
+
+.i-navigation .i-userBox .i-imgBox {
+  position: relative;
+  min-width: 60px;
+  height: 60px;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 50%;
+  border: 10px solid transparent;
+}
+
+.i-navigation .i-userBox .i-imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.i-navigation .i-menu-toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-header ul li {
+.i-navigation .i-menu-toggle:before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: #fefef2;
+  transform: translateY(-10px);
+  box-shadow: 0 10px #fefef2;
+  transition: 0.5s;
+}
+
+.i-navigation .i-menu-toggle:after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: #fefef2;
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+
+.i-navigation.active .i-menu-toggle:before {
+  transform: translateY(0px) rotate(45deg);
+  box-shadow: 0 0 #fefef2;
+}
+
+.i-navigation.active .i-menu-toggle:after {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 60px);
+  margin-top: 60px;
+  overflow: hidden;
+}
+
+.menu li {
+  margin-top: 15px;
   list-style: none;
-  margin-left: 20px;
 }
 
-header ul li a {
+.menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  font-size: 1em;
   text-decoration: none;
-  padding: 6px 15px;
-  color: #fff;
-
-  border-radius: 20px;
+  color: #fefef2;
 }
 
-header ul li a:hover {
-  color: #11085f;
-  transition: all 0.4s ease-out;
-  background-color: #fff;
+.menu li a:hover {
+  color: #31c2c5;
+  transition: 1s;
+}
+
+.menu li a ion-icon {
+  font-size: 1.5em;
+}
+
+.menu li a ion-icon:hover {
+  color: #45d67c;
+}
+
+.i-navigation.active .menu {
+  transition: 2s;
+  border-top: 1px solid #fefef2;
 }
 
 .i-section {
@@ -178,23 +294,52 @@ header ul li a:hover {
 }
 
 .i-btn {
-  text-decoration: none;
+  border: 1px solid #fefef244;
+  background: none;
+  padding: 2px 15px;
   display: inline-block;
-  padding: 8px 30px;
-  border-radius: 40px;
-  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
   color: #fefef2;
   font-size: 1.5em;
   z-index: 9;
   transform: translateY(100px);
-  transition: all 0.1s ease-in-out;
-  border: solid #013469 1px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+    210deg,
+    #23155749 0%,
+    #43107a4b 29%,
+    #ff13623a 67%,
+    #fff7005d 100%
+  );
 }
 
 .i-btn:hover {
-  border: solid #aed1f7 1px;
-  background-image: linear-gradient(to right, #5e93be 0%, #1b2c38 100%);
-  transition: all 0.1s ease-out;
+  border: 1px solid #fefef2;
+  transition: 1s;
+}
+
+.i-btn:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0%;
+  background-image: linear-gradient(
+    210deg,
+    #23155769 0%,
+    #43107a65 29%,
+    #ff13625e 67%,
+    #fff70070 100%
+  );
+  z-index: -1;
+  transition: 0.8s;
+  border-radius: 0 0 50% 50%;
+}
+
+.i-btn:hover:before {
+  height: 140%;
 }
 
 .sec {
@@ -227,6 +372,7 @@ header ul li a:hover {
   background-image: url("images/céu\ limpo\ noite.jpg");
   background-size: contain;
   overflow-x: hidden;
+  overflow-y: hidden;
   mix-blend-mode: screen;
 }
 
