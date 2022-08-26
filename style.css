@@ -307,24 +307,27 @@ header {
   overflow: hidden;
   background-image: linear-gradient(
     210deg,
-    #23155749 0%,
-    #43107a4b 29%,
-    #ff13623a 67%,
-    #fff7005d 100%
+    #23155736 0%,
+    #43107a2f 29%,
+    #ff136227 67%,
+    #fff70033 100%
   );
+
+  border-radius: 20px;
 }
 
 .i-btn:hover {
   border: 1px solid #fefef2;
   transition: 1s;
+  box-shadow: 0px 5px 10px black;
 }
 
 .i-btn:before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
-  width: 100%;
+  bottom: 0;
+  width: 40%;
   height: 0%;
   background-image: linear-gradient(
     210deg,
@@ -334,12 +337,13 @@ header {
     #fff70070 100%
   );
   z-index: -1;
-  transition: 0.8s;
-  border-radius: 0 0 50% 50%;
+  transition: 3s;
+  border-radius: 50% 50% 0 0;
 }
 
 .i-btn:hover:before {
-  height: 140%;
+  height: 180%;
+  width: 600%;
 }
 
 .sec {
