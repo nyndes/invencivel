@@ -49,7 +49,14 @@
       </ul>
     </div>
     <div class="pa-topbar-background"></div>
-
+    <div class="e-presentation">
+      <h1>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi iusto
+        nesciunt esse necessitatibus nam consequatur. Est cupiditate quisquam
+        pariatur nesciunt facere obcaecati esse numquam. Reiciendis quibusdam
+        doloribus vel animi ipsam.
+      </h1>
+    </div>
     <section style="height: 400px"></section>
     <div class="e-image-gallery">
       <div class="e-image-box">
@@ -73,7 +80,12 @@
         </div>
       </div>
 
-      <div class="e-image-box">
+      <div
+        class="e-image-box"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        data-aos-offset="450"
+      >
         <img src="../images/perfumeclarice.jpg" alt="Question image" />
         <div class="e-overlay">
           <div class="e-details">
@@ -95,7 +107,12 @@
         </div>
       </div>
 
-      <div class="e-image-box">
+      <div
+        class="e-image-box"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-duration="1500"
+      >
         <img src="../images/nobrezaSuperior.jpg" alt="Nobreza image" />
         <div class="e-overlay">
           <div class="e-details">
@@ -117,7 +134,13 @@
         </div>
       </div>
 
-      <div class="e-image-box">
+      <div
+        class="e-image-box"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-duration="3000"
+        data-aos-delay="100"
+      >
         <img src="../images/войнаидей.jpg" alt="why? image" />
         <div class="e-overlay">
           <div class="e-details">
@@ -139,7 +162,12 @@
         </div>
       </div>
 
-      <div class="e-image-box">
+      <div
+        class="e-image-box"
+        data-aos="flip-left"
+        data-aos-offset="250"
+        data-aos-duration="1500"
+      >
         <img
           src="../images/someThingsNeverChange.jpg"
           alt="Need Change image"
@@ -161,7 +189,12 @@
         </div>
       </div>
 
-      <div class="e-image-box">
+      <div
+        class="e-image-box"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        data-aos-offset="250"
+      >
         <img src="../images/observadoObservando.jpg" alt="Look image" />
         <div class="e-overlay">
           <div class="e-details">
@@ -174,7 +207,12 @@
         </div>
       </div>
 
-      <div class="e-image-box">
+      <div
+        class="e-image-box"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-duration="1500"
+      >
         <img src="../images/Rendimento.jpg" alt="Rendimento image" />
         <div class="e-overlay">
           <div class="e-details">
@@ -188,7 +226,12 @@
         </div>
       </div>
 
-      <div class="e-image-box">
+      <div
+        class="e-image-box"
+        data-aos="flip-right"
+        data-aos-offset="280"
+        data-aos-duration="1500"
+      >
         <img src="../images/hostages.jpg" alt="Hostages image" />
         <div class="e-overlay">
           <div class="e-details">
@@ -202,7 +245,12 @@
         </div>
       </div>
 
-      <div class="e-image-box">
+      <div
+        class="e-image-box"
+        data-aos="fade-left"
+        data-aos-offset="250"
+        data-aos-duration="1500"
+      >
         <img src="../images/still hostages.jpg" alt="Still Hostages image" />
         <div class="e-overlay">
           <div class="e-details">
@@ -216,7 +264,12 @@
         </div>
       </div>
 
-      <div class="e-image-box">
+      <div
+        class="e-image-box"
+        data-aos="flip-right"
+        data-aos-offset="250"
+        data-aos-duration="1500"
+      >
         <img src="../images/humanidade.jpg" alt="Humanidade image" />
         <div class="e-overlay">
           <div class="e-details">
@@ -235,7 +288,12 @@
         </div>
       </div>
 
-      <div class="e-image-box">
+      <div
+        class="e-image-box"
+        data-aos="zoom-in-right"
+        data-aos-offset="250"
+        data-aos-duration="1500"
+      >
         <img src="../images/harmonia.jpg" alt="Harmonia image" />
         <div class="e-overlay">
           <video controls src="../videos/goodvibes.mp4"></video>
@@ -244,9 +302,10 @@
     </div>
 
     <script>
-      let topBarBk = document.querySelector(".pa-topbar-background");
+      const topBarBk = document.querySelector(".pa-topbar-background");
       const menuToggle = document.querySelector(".i-menu-toggle");
       const navigation = document.querySelector(".i-navigation");
+      const ePresentation = document.querySelector(".e-presentation");
 
       menuToggle.onclick = function () {
         navigation.classList.toggle("active");
@@ -255,6 +314,7 @@
       window.addEventListener("scroll", function () {
         const value = window.scrollY;
 
+        ePresentation.style.opacity = 8 / value;
         topBarBk.style.backgroundPositionX = `${value * -0.7}px`;
         topBarBk.style.backgroundPositionY = `${value * -0.8}px`;
       });
@@ -276,5 +336,9 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
