@@ -390,6 +390,18 @@ header {
   );
 }
 
+.e-presentation {
+  position: absolute;
+  top: 150px;
+  left: 650px;
+  right: 40px;
+}
+
+.e-presentation h1 {
+  text-align: center;
+  color: #fefef2;
+}
+
 .e-image-gallery {
   width: 100%;
   position: relative;
@@ -412,8 +424,11 @@ header {
 }
 
 .e-image-box video {
-  width: 100%;
   cursor: pointer;
+}
+
+.e-image-gallery .e-image-box:nth-child(last) video {
+  width: 100%;
 }
 
 .e-image-gallery .e-image-box:nth-child(even) {
