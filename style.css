@@ -393,7 +393,7 @@ header {
 .e-image-gallery {
   width: 100%;
   position: relative;
-  top: -500px;
+  top: -200px;
   left: -25px;
   max-width: 950px;
   margin: 0 auto;
@@ -409,6 +409,11 @@ header {
 .e-image-gallery .e-image-box {
   position: relative;
   overflow: hidden;
+}
+
+.e-image-box video {
+  width: 100%;
+  cursor: pointer;
 }
 
 .e-image-gallery .e-image-box:nth-child(even) {
@@ -445,6 +450,17 @@ header {
   opacity: 0;
   transition: all 0.5s ease;
   z-index: 1;
+}
+
+.e-image-gallery .e-image-box:nth-child(6) .e-overlay {
+  background-image: url("images/prisao.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.e-image-gallery .e-image-box:nth-child(6) .e-details .e-category {
+  top: 42px;
+  left: 28px;
 }
 
 .e-image-gallery .e-image-box:hover .e-overlay {
