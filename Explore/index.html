@@ -48,7 +48,7 @@
           >
         </li>
         <li>
-          <a href="#modal-perfil"
+          <a class="open-modal-buttom"
             ><ion-icon name="person-sharp"></ion-icon>Perfil</a
           >
         </li>
@@ -309,10 +309,20 @@
     </div>
 
     <script>
-      const topBarBk = document.querySelector(".pa-topbar-background");
-      const menuToggle = document.querySelector(".i-menu-toggle");
-      const navigation = document.querySelector(".i-navigation");
-      const ePresentation = document.querySelector(".e-presentation");
+      const getElement = (...queries) => document.querySelector(...queries);
+
+      const topBarBk = getElement(".pa-topbar-background");
+      const menuToggle = getElement(".i-menu-toggle");
+      const navigation = getElement(".i-navigation");
+      const ePresentation = getElement(".e-presentation");
+
+      const ePerfil = getElement(".open-modal-button");
+      const eContainer = getElement(".modal-container");
+      const eModal = getElement(".modal");
+      const activeModalClass = "modal-show";
+
+      const openModal = () => eContainer.classList.add(activeModalClass);
+      const closeModal = () => eContainer.classList.remove(activeModalClass);
 
       menuToggle.onclick = function () {
         navigation.classList.toggle("active");
@@ -327,13 +337,16 @@
       });
 
       window.addEventListener("load", function () {
-        var pageloader = document.querySelector(".e-loader");
+        var pageloader = getElement(".e-loader");
         pageloader.classList.add("i-fade-out");
 
         setTimeout(function () {
           pageloader.style.display = "none";
         }, 2000);
       });
+
+      ePerfil.addEventListener("click", openModal);
+      eContainer.addEventListener("click", closeModal);
     </script>
     <script
       type="module"
