@@ -162,6 +162,7 @@ header {
   font-size: 1em;
   text-decoration: none;
   color: #fefef2;
+  cursor: pointer;
 }
 
 .menu li a:hover {
@@ -559,30 +560,32 @@ ion-icon {
   transition: all 0.2s ease;
 }
 
-.e-modal-overlay {
-  background-image: linear-gradient(210deg, #231557 0%, #44107a 29%);
+.modal-container {
+  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+
   width: 100%;
   height: 100vh;
+
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 2;
   display: grid;
   place-items: center;
-  opacity: 1;
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none;
 }
 
-.e-modal-perfil {
-  background-color: #fefef2;
-  width: 750px;
-  height: 350px;
+.modal {
+  background: #fff;
+  width: 250px;
+  height: 150px;
   padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 10px #00000070;
-  z-index: 2;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 #00000070;
 }
 
-.e-modal-perfil-show {
+.modal-show {
   opacity: 1;
   pointer-events: auto;
 }
