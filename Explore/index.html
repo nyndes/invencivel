@@ -316,14 +316,6 @@
       const navigation = getElement(".i-navigation");
       const ePresentation = getElement(".e-presentation");
 
-      const ePerfil = getElement(".open-modal-button");
-      const eContainer = getElement(".modal-container");
-      const eModal = getElement(".modal");
-      const activeModalClass = "modal-show";
-
-      const openModal = () => eContainer.classList.add(activeModalClass);
-      const closeModal = () => eContainer.classList.remove(activeModalClass);
-
       menuToggle.onclick = function () {
         navigation.classList.toggle("active");
       };
@@ -345,6 +337,14 @@
         }, 2000);
       });
 
+      const ePerfil = getElement(".open-modal-buttom");
+      const eContainer = getElement(".modal-container");
+      const eModal = getElement(".modal");
+      const activeModalClass = "modal-show";
+
+      const openModal = () => eContainer.classList.add(activeModalClass);
+      const closeModal = () => eContainer.classList.remove(activeModalClass);
+      //lÊ a porra do ponto(".") DIREITO!!!
       ePerfil.addEventListener("click", openModal);
       eContainer.addEventListener("click", closeModal);
     </script>
