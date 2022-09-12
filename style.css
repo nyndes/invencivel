@@ -175,7 +175,7 @@ body {
 }
 
 .i-navigation.active .menu {
-  transition: 2s;
+  transition: 0.5s;
   border-top: 1px solid #fefef2;
 }
 
@@ -606,6 +606,17 @@ ion-icon {
 .modal h2 {
   position: relative;
   top: 50px;
+  text-align: center;
+}
+
+.modal h2 a ion-icon {
+  color: black;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.modal h2 a ion-icon:hover {
+  color: #fefef2;
 }
 
 .modal-show {
