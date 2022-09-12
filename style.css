@@ -545,13 +545,13 @@ ion-icon {
 }
 
 .e-image-gallery .e-category ion-icon:hover {
-  color: #ecff3c;
-  filter: drop-shadow(0 0 0.9rem black);
+  color: #6e072e;
+  filter: drop-shadow(0 0 0.9rem rgb(255, 210, 210));
   transition: all 0.2s ease;
 }
 
 .e-image-gallery .e-title ion-icon:hover {
-  color: red;
+  color: #ff0015;
   filter: drop-shadow(0 0 0.9rem black);
   transition: all 0.2s ease;
 }
