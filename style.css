@@ -574,12 +574,12 @@ ion-icon {
 }
 
 .modal {
-  background: #fff;
+  background-image: linear-gradient(to right, #ebd6b8 0%, #d4af83 100%);
   width: 60%;
   height: 400px;
   padding: 15px;
   border-radius: 5px;
-  box-shadow: 0 0 10px 0 #00000070;
+  box-shadow: 0 0 50px 0 #00000085;
   display: flex;
 }
 
