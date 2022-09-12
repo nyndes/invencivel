@@ -575,11 +575,37 @@ ion-icon {
 
 .modal {
   background: #fff;
-  width: 250px;
-  height: 150px;
+  width: 60%;
+  height: 400px;
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 0 10px 0 #00000070;
+  display: flex;
+}
+
+.modal .i-perfil-img {
+  position: relative;
+  width: 150%;
+  height: 233px;
+  top: 59px;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 50%;
+  border: 10px solid transparent;
+}
+
+.modal .i-perfil-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 203px;
+  height: 228px;
+  object-fit: cover;
+}
+
+.modal h2 {
+  position: relative;
+  top: 50px;
 }
 
 .modal-show {
