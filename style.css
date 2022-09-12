@@ -29,14 +29,10 @@ body {
   overflow-x: hidden;
 }
 
-header {
+.logo-img {
   position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px 70px;
-  display: flex;
-  align-items: center;
-  z-index: 10000;
+  top: -120px;
+  left: -50px;
 }
 
 .i-navigation {
