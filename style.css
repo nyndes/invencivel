@@ -575,47 +575,109 @@ ion-icon {
 
 .modal {
   background-image: linear-gradient(to right, #ebd6b8 0%, #d4af83 100%);
-  width: 60%;
-  height: 400px;
-  padding: 15px;
+  width: 330px;
+  height: 300px;
   border-radius: 5px;
   box-shadow: 0 0 50px 0 #00000085;
-  display: flex;
+  position: relative;
+  transition: 0.5s;
+}
+
+.modal:hover {
+  width: 700px;
+  height: 350px;
 }
 
 .modal .i-perfil-img {
-  position: relative;
-  width: 150%;
-  height: 233px;
-  top: 59px;
+  position: absolute;
+  width: 200px;
+  height: 220px;
+  top: 50%;
+  left: -103px;
+  transform: translateY(-50%);
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px 0 #00000095;
   overflow: hidden;
-  background: transparent;
-  border-radius: 50%;
-  border: 10px solid transparent;
+  transition: 0.5s;
+}
+
+.modal:hover .i-perfil-img {
+  width: 250px;
+  height: 270px;
 }
 
 .modal .i-perfil-img img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 203px;
-  height: 228px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 15px;
 }
 
-.modal h2 {
-  position: relative;
-  top: 50px;
+.modal .i-content-perfil {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.modal .i-content-perfil .i-details-perfil {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin-left: 80px;
+  margin-top: 89px;
+  transition: 0.8s;
+}
+
+.modal:hover .i-content-perfil .i-details-perfil {
+  margin-top: 0;
+}
+
+.modal .i-content-perfil .i-details-perfil h2 {
+  font-size: 1.25em;
+  font-weight: 800;
+  color: #18191b;
+  line-height: 1.2em;
+}
+
+.modal .i-content-perfil .i-details-perfil h2 span {
+  font-size: 0.85em;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+.modal .i-content-perfil .i-perfil-text {
+  position: absolute;
+  margin: 141px 107px 0 181px;
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.modal:hover .i-content-perfil .i-perfil-text {
+  opacity: 1;
+}
+
+.modal .i-content-perfil .i-perfil-text h3 {
+  font-size: 1em;
+  color: #18191b;
+  line-height: 1.2em;
+  font-weight: 500;
   text-align: center;
 }
 
-.modal h2 a ion-icon {
-  color: black;
+.modal .i-content-perfil .i-details-perfil a ion-icon {
+  color: #18191b;
   cursor: pointer;
-  transition: all 1s ease;
+  transition: 0.8s;
 }
 
-.modal h2 a ion-icon:hover {
+.modal .i-content-perfil .i-details-perfil a ion-icon:hover {
   color: #fefef2;
 }
 
