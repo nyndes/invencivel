@@ -162,16 +162,12 @@ body {
 }
 
 .menu li a:hover {
-  color: #fddb92;
-  transition: 1s;
+  color: #90db73f3;
+  transition: 0.75s;
 }
 
 .menu li a ion-icon {
   font-size: 1.5em;
-}
-
-.menu li a ion-icon:hover {
-  color: #fdbb05f3;
 }
 
 .i-navigation.active .menu {
@@ -328,10 +324,10 @@ body {
   height: 0%;
   background-image: linear-gradient(
     210deg,
-    #23155769 0%,
-    #43107a65 29%,
-    #ff13625e 67%,
-    #fff70070 100%
+    #231557a2 0%,
+    #43107aad 29%,
+    #ff13628c 67%,
+    #fff700a6 100%
   );
   z-index: -1;
   transition: 3s;
@@ -556,8 +552,9 @@ ion-icon {
   transition: all 0.2s ease;
 }
 
-.modal-container {
-  background-image: linear-gradient(25deg, #fddb92b7 0%, #1e2c3844 100%);
+.modal-container,
+.modal-container-invencivel {
+  background-image: linear-gradient(25deg, #3c1647 0%, #1e2c3844 65%);
 
   width: 100%;
   height: 0;
@@ -568,27 +565,39 @@ ion-icon {
   display: grid;
   place-items: center;
   opacity: 0;
-  z-index: 10;
+  z-index: 1001;
   pointer-events: none;
   transition: opacity 0.45s, height 0.5s;
 }
 
-.modal {
-  background-image: linear-gradient(to right, #ebd6b8 0%, #d4af83 100%);
+.modal-container-invencivel {
+  background-image: linear-gradient(25deg, #728c9b 0%, #1e2c3844 45%);
+}
+
+.modal,
+.modal-invencivel {
+  background-image: linear-gradient(25deg, #ebd89bec 35%, #ffffff 100%);
   width: 330px;
   height: 300px;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0 0 50px 0 #00000085;
   position: relative;
   transition: 0.5s;
 }
 
-.modal:hover {
-  width: 700px;
-  height: 350px;
+.modal-invencivel {
+  background: #d0d2d3;
 }
 
-.modal .i-perfil-img {
+.modal:hover,
+.modal-invencivel:hover {
+  width: 700px;
+  height: 350px;
+  border-radius: 5px;
+}
+
+.modal .i-perfil-img,
+.modal-invencivel .i-perfil-img {
   position: absolute;
   width: 200px;
   height: 220px;
@@ -601,12 +610,15 @@ ion-icon {
   transition: 0.5s;
 }
 
-.modal:hover .i-perfil-img {
+.modal:hover .i-perfil-img,
+.modal-invencivel:hover .i-perfil-img {
   width: 250px;
   height: 270px;
+  box-shadow: 5px 5px 5px 0 #00000095;
 }
 
-.modal .i-perfil-img img {
+.modal .i-perfil-img img,
+.modal-invencivel .i-perfil-img img {
   position: absolute;
   top: 0;
   left: 0;
@@ -616,7 +628,8 @@ ion-icon {
   border-radius: 15px;
 }
 
-.modal .i-content-perfil {
+.modal .i-content-perfil,
+.modal-invencivel .i-content-perfil {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -626,58 +639,84 @@ ion-icon {
   overflow: hidden;
 }
 
-.modal .i-content-perfil .i-details-perfil {
+.modal .i-content-perfil .i-details-perfil,
+.modal-invencivel .i-content-perfil .i-details-perfil {
   text-align: center;
   padding: 20px;
   width: 100%;
-  margin-left: 80px;
+  margin-left: 105px;
   margin-top: 89px;
   transition: 0.8s;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.modal:hover .i-content-perfil .i-details-perfil {
+.modal:hover .i-content-perfil .i-details-perfil,
+.modal-invencivel:hover .i-content-perfil .i-details-perfil {
   margin-top: 0;
+  transition: 1s;
 }
 
-.modal .i-content-perfil .i-details-perfil h2 {
+.modal .i-content-perfil .i-details-perfil h2,
+.modal-invencivel .i-content-perfil .i-details-perfil h2 {
   font-size: 1.25em;
   font-weight: 800;
   color: #18191b;
   line-height: 1.2em;
 }
 
-.modal .i-content-perfil .i-details-perfil h2 span {
+.modal .i-content-perfil .i-details-perfil h2 span,
+.modal-invencivel .i-content-perfil .i-details-perfil h2 span {
   font-size: 0.85em;
   font-weight: 700;
   opacity: 0.5;
 }
 
-.modal .i-content-perfil .i-perfil-text {
-  position: absolute;
-  margin: 141px 107px 0 181px;
-  opacity: 0;
-  transition: opacity 3s;
+.i-details-perfil div {
+  margin: 23px 60px 20px 53px;
+  position: static;
+  display: block;
+  transform: translateY(100px);
+  overflow: hidden;
+  transition: 1s;
 }
 
-.modal:hover .i-content-perfil .i-perfil-text {
-  opacity: 1;
+.i-perfil-text {
+  margin: 23px 60px 20px 53px;
 }
 
-.modal .i-content-perfil .i-perfil-text h3 {
+.modal:hover .i-content-perfil .i-perfil-text,
+.modal-invencivel:hover .i-content-perfil .i-perfil-text {
+  margin-top: -110px;
+}
+
+.modal .i-content-perfil .i-perfil-text h3,
+.modal-invencivel .i-content-perfil .i-perfil-text h3 {
   font-size: 1em;
   color: #18191b;
   line-height: 1.2em;
   font-weight: 500;
-  text-align: center;
+  margin: 58px;
+  width: 400px;
+  opacity: 0;
+  transition: 3s;
 }
 
-.modal .i-content-perfil .i-details-perfil a ion-icon {
+.modal:hover .i-content-perfil .i-perfil-text h3,
+.modal-invencivel:hover .i-content-perfil .i-perfil-text h3 {
+  opacity: 1;
+}
+
+.modal .i-content-perfil .i-details-perfil a ion-icon,
+.modal-invencivel .i-content-perfil .i-details-perfil a ion-icon {
   color: #18191b;
   cursor: pointer;
   transition: 0.8s;
 }
 
-.modal .i-content-perfil .i-details-perfil a ion-icon:hover {
+.modal .i-content-perfil .i-details-perfil a ion-icon:hover,
+.modal-invencivel .i-content-perfil .i-details-perfil a ion-icon:hover {
   color: #fefef2;
 }
 
