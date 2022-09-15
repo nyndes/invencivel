@@ -20,6 +20,25 @@
       <div></div>
     </div>
     <img src="images/ohana.png" alt="Logo" width="300px" class="logo-img" />
+    <div class="modal-container-invencivel">
+      <div class="modal-invencivel">
+        <div class="i-perfil-img">
+          <img src="images/perfil2.jpg" alt="Perfil img" />
+        </div>
+        <div class="i-content-perfil">
+          <div class="i-details-perfil">
+            <h2>Nyndes <br><span>Junior UX/UI Designer</span></br></h2>
+            <a href="https://github.com/nyndes"
+            ><ion-icon name="logo-github"></ion-icon
+            ></a>       
+            <div class="i-perfil-text">
+              <h3>Quod culpa quibusdam porro at omnis fugit sed, velit esse molestiae quam vero neque odio alias dolore excepturi et expedita minima eligendi.</h3>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
     <div class="i-navigation">
       <div class="i-userBox">
         <div class="i-imgBox">
@@ -30,7 +49,7 @@
       <div class="i-menu-toggle"></div>
       <ul class="menu">
         <li>
-          <a href="#"><ion-icon name="person-sharp"></ion-icon>My Profile</a>
+          <a class="open-modal-buttom"><ion-icon name="person-sharp"></ion-icon>Saiba mais!</a>
         </li>
         <li>
           <a href="#"><ion-icon name="call-sharp"></ion-icon>Contact</a>
@@ -95,6 +114,7 @@
       </p>
     </div>
     <script>
+      const getElement = (...queries) => document.querySelector(...queries);
       const stars = document.querySelector(".i-stars");
       const forest = document.querySelector(".i-forest");
       const castle = document.querySelector(".i-castle");
@@ -109,7 +129,7 @@
 
       window.addEventListener("scroll", function () {
         const value = window.scrollY;
-
+        
         stars.style.bottom = `${value * 0.3}px`;
         castle.style.right = `${value * 0.1}px`;
         castle.style.top = `${value * 0.1}px`;
@@ -127,6 +147,18 @@
           pageloader.style.display = "none";
         }, 1000);
       });
+
+      const ePerfil = getElement(".open-modal-buttom");
+      const eContainer = getElement(".modal-container-invencivel");
+      const eModal = getElement(".modal-invencivel");
+      const activeModalClass = "modal-show";
+
+      const openModal = () => eContainer.classList.add(activeModalClass);
+      const closeModal = () => eContainer.classList.remove(activeModalClass);
+
+      ePerfil.addEventListener("click", openModal);
+      eContainer.addEventListener("click", closeModal);
+
     </script>
     <script
       type="module"
