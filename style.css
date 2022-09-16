@@ -29,10 +29,19 @@ body {
   overflow-x: hidden;
 }
 
-.logo-img {
+.logo-container {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
   position: absolute;
-  top: -120px;
-  left: -50px;
+}
+
+.logo-container img {
+  position: absolute;
+  width: 150px;
+  top: -14px;
+  left: -37px;
+  object-fit: cover;
 }
 
 .i-navigation {
@@ -300,10 +309,10 @@ body {
   overflow: hidden;
   background-image: linear-gradient(
     210deg,
-    #23155736 0%,
-    #43107a2f 29%,
-    #ff136227 67%,
-    #fff70033 100%
+    #2315579a 0%,
+    #2464786e 29%,
+    #e7b1608a 67%,
+    #f19d0070 100%
   );
 
   border-radius: 20px;
@@ -324,18 +333,18 @@ body {
   height: 0%;
   background-image: linear-gradient(
     210deg,
-    #231557a2 0%,
-    #43107aad 29%,
-    #ff13628c 67%,
-    #fff700a6 100%
+    #231557e5 0%,
+    #246478e5 29%,
+    #60cce7d5 67%,
+    #383bce70 100%
   );
   z-index: -1;
-  transition: 3s;
+  transition: 2s;
   border-radius: 50% 50% 0 0;
 }
 
 .i-btn:hover:before {
-  height: 180%;
+  height: 300%;
   width: 700%;
 }
 
@@ -377,15 +386,15 @@ body {
   background-image: linear-gradient(
     218deg,
     #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
+    #246578 29%,
+    #e7b160 67%,
+    #f19c00 100%
   );
 }
 
 .e-presentation {
   position: absolute;
-  top: 340px;
+  top: 300px;
   left: 650px;
   right: 40px;
 }
@@ -398,8 +407,8 @@ body {
 .e-image-gallery {
   width: 100%;
   position: relative;
-  top: -200px;
-  left: -25px;
+  top: -299px;
+  left: -55px;
   max-width: 950px;
   margin: 0 auto;
   padding: 50px 20px;
@@ -447,10 +456,10 @@ body {
   left: 0;
   background-image: linear-gradient(
     210deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
+    #231557ef 0%,
+    #246478f3 29%,
+    #e7b160ea 67%,
+    #f19d00ee 100%
   );
   display: flex;
   align-items: center;
@@ -531,7 +540,7 @@ body {
 }
 
 .e-image-gallery .e-image-box:nth-child(4) .e-details .e-title a:hover {
-  color: #ffd900;
+  color: #ffffff;
   transition: all 3s ease;
 }
 
@@ -541,9 +550,9 @@ ion-icon {
 }
 
 .e-image-gallery .e-category ion-icon:hover {
-  color: #6e072e;
+  color: #a30944;
   filter: drop-shadow(0 0 0.9rem rgb(255, 210, 210));
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
 }
 
 .e-image-gallery .e-title ion-icon:hover {
@@ -554,7 +563,7 @@ ion-icon {
 
 .modal-container,
 .modal-container-invencivel {
-  background-image: linear-gradient(25deg, #3c1647 0%, #1e2c3844 65%);
+  background-image: linear-gradient(25deg, #c9c1b1 0%, #1e2c3844 65%);
 
   width: 100%;
   height: 0;
@@ -724,6 +733,51 @@ ion-icon {
   height: 100vh;
   opacity: 1;
   pointer-events: auto;
+}
+
+footer {
+  background: #111;
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+  color: #fefef2;
+}
+
+.e-footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.e-footer-content h3 {
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3em;
+}
+
+.e-footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1px 0 1px 0;
+}
+
+.socials a {
+  color: #fefef2;
+  transition: 0.35s;
+}
+
+.socials a:hover {
+  color: #84e6f7;
 }
 
 @media (max-width: 768px) {
