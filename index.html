@@ -36,7 +36,7 @@
             ><ion-icon name="logo-github"></ion-icon
             ></a>       
             <div class="i-perfil-text">
-              <h3>Quod culpa quibusdam porro at omnis fugit sed, velit esse molestiae quam vero neque odio alias dolore excepturi et expedita minima eligendi.</h3>
+              <h3>Um explorador nesse continente chamado Programação. Este é meu primeiro projeto na área de <span style="font-weight:900">Front-end Design</span>, clique no botão "Explore" e acesse uma galeria com pensamentos que moldaram parte da minha trajetória até aqui.</h3>
             </div>
           </div>
           
@@ -56,7 +56,7 @@
           <a class="open-modal-buttom"><ion-icon name="person-sharp"></ion-icon>Saiba mais!</a>
         </li>
         <li>
-          <a href="#"><ion-icon name="call-sharp"></ion-icon>Contact</a>
+          <a href="#"><ion-icon name="people"></ion-icon>Influências</a>
         </li>
       </ul>
     </div>
@@ -118,13 +118,13 @@
     </div>
     <script>
       const getElement = (...queries) => document.querySelector(...queries);
-      const stars = document.querySelector(".i-stars");
-      const forest = document.querySelector(".i-forest");
-      const castle = document.querySelector(".i-castle");
-      const text = document.querySelector(".i-text");
-      const btn = document.querySelector(".i-btn");
-      const menuToggle = document.querySelector(".i-menu-toggle");
-      const navigation = document.querySelector(".i-navigation");
+      const stars = getElement(".i-stars");
+      const forest = getElement(".i-forest");
+      const castle = getElement(".i-castle");
+      const text = getElement(".i-text");
+      const btn = getElement(".i-btn");
+      const menuToggle = getElement(".i-menu-toggle");
+      const navigation = getElement(".i-navigation");
 
       menuToggle.onclick = function () {
         navigation.classList.toggle("active");
@@ -143,7 +143,7 @@
       });
 
       window.addEventListener("load", function () {
-        var pageloader = document.querySelector(".i-loader");
+        var pageloader = getElement(".i-loader");
         pageloader.classList.add("i-fade-out");
 
         setTimeout(function () {
