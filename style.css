@@ -758,7 +758,7 @@ ion-icon {
 
 .modal:hover .i-content-perfil .i-perfil-text,
 .modal-invencivel:hover .i-content-perfil .i-perfil-text {
-  margin-top: -85px;
+  margin-top: -65px;
 }
 
 .modal .i-content-perfil .i-perfil-text h3,
@@ -775,6 +775,11 @@ ion-icon {
 
 .modal .i-content-perfil .i-perfil-text h3 span {
   font-weight: 800;
+}
+
+.i-perfil-text a {
+  color: #da5454;
+  text-decoration: none;
 }
 .modal:hover .i-content-perfil .i-perfil-text h3,
 .modal-invencivel:hover .i-content-perfil .i-perfil-text h3 {
