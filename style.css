@@ -18,6 +18,12 @@
   }
 }
 
+@keyframes inf-fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
 body {
   min-height: 100vh;
   background-image: linear-gradient(
@@ -87,6 +93,12 @@ body {
   font-size: 1.1em;
 }
 
+.i-navigation .i-userBox .i-username-black {
+  white-space: nowrap;
+  color: #b34423f3;
+  font-size: 1.1em;
+}
+
 .i-navigation .i-userBox .i-imgBox {
   position: relative;
   min-width: 60px;
@@ -146,7 +158,8 @@ body {
   transform: translateY(0px) rotate(-45deg);
 }
 
-.menu {
+.menu,
+.menu-black {
   position: absolute;
   width: 100%;
   height: calc(100% - 60px);
@@ -154,12 +167,14 @@ body {
   overflow: hidden;
 }
 
-.menu li {
+.menu li,
+.menu-black li {
   margin-top: 15px;
   list-style: none;
 }
 
-.menu li a {
+.menu li a,
+.menu-black li a {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -170,18 +185,33 @@ body {
   cursor: pointer;
 }
 
+.menu-black li a ion-icon {
+  color: #b34423f3;
+}
+
 .menu li a:hover {
-  color: #71eed9f3;
+  color: #14ac71f3;
   transition: 0.3s;
 }
 
-.menu li a ion-icon {
+.menu-black li a:hover {
+  color: #b34423f3;
+  transition: 0.3s;
+}
+
+.menu li a ion-icon,
+.menu-black li a ion-icon {
   font-size: 1.5em;
 }
 
 .i-navigation.active .menu {
   transition: 0.5s;
   border-top: 1px solid #fefef2;
+}
+
+.i-navigation.active .menu-black {
+  transition: 0.5s;
+  border-top: 1px solid #b34423f3;
 }
 
 .i-section {
@@ -243,6 +273,28 @@ body {
   z-index: 11000;
 }
 
+.inf-loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a090a;
+  z-index: 11000;
+}
+
+.inf-loader h1 {
+  color: #fefef2;
+}
+
+.inf-loader h1 span {
+  font-size: 20px;
+  color: #b34423f3;
+}
+
 .i-loader div,
 .e-loader div {
   background: #fefef2;
@@ -285,6 +337,10 @@ body {
 
 .i-fade-out {
   animation: fadeOut 3s forwards ease-out;
+}
+
+.inf-fade-out {
+  animation: inf-fadeOut 3s forwards ease-out;
 }
 
 .i-text {
@@ -697,7 +753,7 @@ ion-icon {
 
 .modal:hover .i-content-perfil .i-perfil-text,
 .modal-invencivel:hover .i-content-perfil .i-perfil-text {
-  margin-top: -110px;
+  margin-top: -120px;
 }
 
 .modal .i-content-perfil .i-perfil-text h3,
@@ -735,11 +791,86 @@ ion-icon {
   pointer-events: auto;
 }
 
+/* Influências */
+
+.inf-background {
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 60px 0 0 0;
+}
+
+.card-container {
+  width: 270px;
+  display: table;
+  float: right;
+  top: 0;
+  left: 0;
+  margin: 60px 25px 0 0;
+}
+
+.card {
+  width: 100%;
+  display: table;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.card .card-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+.card .card-image-top {
+  margin-top: -55px;
+}
+
+.card .card-body {
+  width: 100%;
+  display: table;
+  margin-top: 13px;
+}
+
+.card .card-body h1 {
+  font-size: 21px;
+  line-height: 24px;
+  color: #0a090a;
+  margin: 0;
+}
+
+.card .card-body p {
+  font-size: 12px;
+  display: block;
+  line-height: 14px;
+  color: #4a4a4a;
+  font-weight: 800;
+  margin: 15px 0 10px 0;
+}
+
+.card .card-footer {
+  width: 100%;
+  display: table;
+}
+
+.card .card-footer .btn {
+  width: 100%;
+}
+
 footer {
   background: #111;
   height: auto;
   width: 100vw;
-  padding-top: 40px;
+  padding-top: 5px;
   color: #fefef2;
 }
 
@@ -787,6 +918,12 @@ footer {
   font-size: 16px;
   word-spacing: 2px;
   text-transform: capitalize;
+}
+
+/*CLASSES AUXILIARES*/
+
+.i-background-black {
+  background: #000;
 }
 
 @media (max-width: 768px) {
