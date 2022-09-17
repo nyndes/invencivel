@@ -185,13 +185,18 @@ body {
   cursor: pointer;
 }
 
+.menu li a span {
+  color: #b0daf1f3;
+  font-weight: 800;
+}
+
 .menu-black li a ion-icon {
   color: #b34423f3;
 }
 
 .menu li a:hover {
-  color: #14ac71f3;
-  transition: 0.3s;
+  color: #9cddf7f3;
+  transition: 0.2s;
 }
 
 .menu-black li a:hover {
@@ -306,32 +311,32 @@ body {
 }
 
 .i-loader div:nth-child(1) {
-  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
   animation-delay: -0.6s;
 }
 
 .i-loader div:nth-child(2) {
-  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
   animation-delay: -0.4s;
 }
 
 .i-loader div:nth-child(3) {
-  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
   animation-delay: -0.2s;
 }
 
 .e-loader div:nth-child(1) {
-  background-image: linear-gradient(to top, #ff1361 0%, #fff800 100%);
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
   animation-delay: -0.6s;
 }
 
 .e-loader div:nth-child(2) {
-  background-image: linear-gradient(to top, #ff1361 0%, #fff800 100%);
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
   animation-delay: -0.4s;
 }
 
 .e-loader div:nth-child(3) {
-  background-image: linear-gradient(to top, #ff1361 0%, #fff800 100%);
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
   animation-delay: -0.2s;
 }
 
@@ -753,7 +758,7 @@ ion-icon {
 
 .modal:hover .i-content-perfil .i-perfil-text,
 .modal-invencivel:hover .i-content-perfil .i-perfil-text {
-  margin-top: -120px;
+  margin-top: -85px;
 }
 
 .modal .i-content-perfil .i-perfil-text h3,
@@ -762,12 +767,15 @@ ion-icon {
   color: #18191b;
   line-height: 1.2em;
   font-weight: 500;
-  margin: 58px;
+  margin: 15px;
   width: 400px;
   opacity: 0;
   transition: 3s;
 }
 
+.modal .i-content-perfil .i-perfil-text h3 span {
+  font-weight: 800;
+}
 .modal:hover .i-content-perfil .i-perfil-text h3,
 .modal-invencivel:hover .i-content-perfil .i-perfil-text h3 {
   opacity: 1;
@@ -783,6 +791,7 @@ ion-icon {
 .modal .i-content-perfil .i-details-perfil a ion-icon:hover,
 .modal-invencivel .i-content-perfil .i-details-perfil a ion-icon:hover {
   color: #fefef2;
+  filter: drop-shadow(0 0 0.4rem black);
 }
 
 .modal-show {
