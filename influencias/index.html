@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="../images/moon-sharp.svg"
+      type="image/x-icon"
+    />
+    <title>Influências</title>
+  </head>
+
+  <body class="inf-background">
+    <div class="inf-loader">
+      <h1>
+        Se eu vi mais longe, foi por estar sobre ombros de gigantes.
+        <span>Isaac Newton</span>
+      </h1>
+    </div>
+
+    <div class="i-navigation">
+      <div class="i-userBox">
+        <div class="i-imgBox">
+          <img src="../images/perfil.jpg" alt="Perfil img" />
+        </div>
+        <p class="i-username-black">Nyndes</p>
+      </div>
+      <div class="i-menu-toggle"></div>
+      <ul class="menu-black">
+        <li>
+          <a href="../index.html"
+            ><ion-icon name="home-sharp"></ion-icon>Home</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <main>
+      <div class="card-container">
+        <div class="card">
+          <img
+            src="../images/perfil2.jpg"
+            alt="Referencias"
+            title="Referencias"
+            class="card-image card-image-top"
+          />
+          <div class="card-body">
+            <h1>Esse é o Titulo do meu card</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
+              nihil sapiente? Asperiores fugiat blanditiis temporibus.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img
+            src="../images/perfil2.jpg"
+            alt="Referencias"
+            title="Referencias"
+            class="card-image card-image-top"
+          />
+          <div class="card-body">
+            <h1>Esse é o Titulo do meu Terceiro card</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
+              nihil sapiente? Asperiores fugiat blanditiis temporibus.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img
+            src="../images/perfil2.jpg"
+            alt="Referencias"
+            title="Referencias"
+            class="card-image card-image-top"
+          />
+          <div class="card-body">
+            <h1>Esse é o Titulo do meu Terceiro card</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
+              nihil sapiente? Asperiores fugiat blanditiis temporibus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const getElement = (...queries) => document.querySelector(...queries);
+
+      const menuToggle = getElement(".i-menu-toggle");
+      const navigation = getElement(".i-navigation");
+
+      menuToggle.onclick = function () {
+        navigation.classList.toggle("active");
+      };
+
+      window.addEventListener("load", function () {
+        var pageloader = getElement(".inf-loader");
+
+        setTimeout(function () {
+          pageloader.style.display = "none";
+        }, 8000);
+
+        setTimeout(function () {
+          pageloader.classList.add("inf-fade-out");
+        }, 3000);
+      });
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
