@@ -48,6 +48,7 @@ body {
   top: -14px;
   left: -37px;
   object-fit: cover;
+  z-index: 2000;
 }
 
 .i-navigation {
@@ -940,7 +941,37 @@ footer {
   background: #000;
 }
 
+@media (max-width: 900px) {
+  .i-btn {
+    transform: translateY(50px);
+  }
+}
+
 @media (max-width: 768px) {
+  .i-section img {
+    height: 100%;
+  }
+
+  .sec {
+    position: relative;
+    padding: 100px;
+    background: #0b1833;
+    z-index: 12;
+  }
+
+  .sec h2 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #fefef2;
+    text-align: center;
+  }
+
+  .sec p {
+    font-size: 1.2em;
+    color: #fefef2;
+    text-align: center;
+  }
+
   .e-image-gallery {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-auto-rows: 350px;
