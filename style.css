@@ -888,6 +888,7 @@ main {
   line-height: 24px;
   color: #0a090a;
   margin: 0;
+  text-align: center;
 }
 
 .card .card-body p {
@@ -897,6 +898,23 @@ main {
   color: #4a4a4a;
   font-weight: 800;
   margin: 15px 0 10px 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.card .card-body p a ion-icon {
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #4a4a4a;
+  transition: 0.7s;
+}
+
+.card .card-body p a ion-icon:hover {
+  color: #0a090a;
+  filter: drop-shadow(0 2px 0.4rem #e2d1c3);
 }
 
 .card .card-footer {
