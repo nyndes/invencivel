@@ -35,34 +35,6 @@ body {
   overflow-x: hidden;
 }
 
-.bg-music {
-  position: absolute;
-  top: 5%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  z-index: 10000;
-}
-
-.btn-music {
-  background-color: transparent;
-  color: #fefef2;
-  border: none;
-  display: block;
-  margin: 0 auto;
-  opacity: 0.3;
-  transition: all linear 1.5s;
-  cursor: pointer;
-}
-
-.btn-music:hover {
-  opacity: 1;
-}
-
-.btn-music ion-icon {
-  font-size: 45px;
-}
-
 .logo-container {
   width: 100px;
   height: 100px;
